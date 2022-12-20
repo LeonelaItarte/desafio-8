@@ -5,8 +5,24 @@ const productsManager = new ProductsManager();
 
 const routerProductos = Router();
 
+const productos = productsManager.productos
+
 
 routerProductos.get('/',(req,res)=>{
+   
+   //res.render('../views/ejs/inicio.ejs',{productos})
+   res.render('../views/pug/inicio.pug',{productos})
+   //res.render('../views/layouts/main.handlebars',{productos})
+})
+
+routerProductos.post('/',(req,res)=>{
+   productos.push(req.body)
+
+   res.redirect('/productos')
+})
+
+
+/*routerProductos.get('/',(req,res)=>{
    
     res.send(productsManager.listarAll())
  })
@@ -53,5 +69,5 @@ routerProductos.get('/:id',(req,res)=>{
     res.send(productsManager.borrar(id))
 
 
- })
+ })*/
  export default routerProductos
