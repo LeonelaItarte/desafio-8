@@ -9,8 +9,8 @@ var _expressHandlebars = _interopRequireDefault(require("express-handlebars"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var app = (0, _express["default"])();
-app.engine("handlebars", _expressHandlebars["default"].engine()); //app.set('view engine',  'ejs')
-//app.set('views', '../views/ejs') este no descomentar porque sino no me anda
+app.engine("handlebars", _expressHandlebars["default"].engine()); //app.set('views', '../views/ejs') este no descomentar porque sino no me anda
+//app.set('view engine',  'ejs')
 
 app.set('view engine', 'pug'); //app.set('view engine',  'handlebars')
 

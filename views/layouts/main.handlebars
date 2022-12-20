@@ -24,7 +24,7 @@
         <input id='precio' class='from-control' type="number" name="precio">
     </div>
     <div class="form-group">
-        <label for="nombre">Foto</label>
+        <label for="nombre">Foto URL</label>
         <input id='foto' class='from-control' type="text" name="foto">
     </div>
     <button class="btn btn-success mt-3 md-5">Enviar</button>
@@ -34,7 +34,7 @@
     <div class="table-responsive">
         <table class="table table-dark">
 
-            <tr style="color: yellow;"><th>Nombre</th><th>precio</th><th>foto</th></tr>
+            <tr style="color: yellow;"><th>Nombre</th><th>Precio</th><th>Foto</th></tr>
                 {{#each productos}}
                     <tr>
                         <td>{{this.nombre}}</td>
